@@ -52,7 +52,7 @@ function call_modal(init) {
 // Cache selectors
 var lastId,
     topMenu = $(".top-menu"),
-    topMenuHeight = topMenu.outerHeight(),
+    topMenuHeight = topMenu.outerHeight()+50,
 // All list items
     menuItems = topMenu.find("a"),
 // Anchors corresponding to menu items
@@ -65,8 +65,11 @@ var lastId,
 // Bind click handler to menu items
 // so we can get a fancy scroll animation
 menuItems.click(function(e){
+    var correct = 0;
+    if (topMenu.hasClass('menu-fix'))
+        correct = 50;
     var href = $(this).attr("href"),
-        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+correct+1;
     noScrollAction = true;
     $('html, body').stop().animate({
         scrollTop: offsetTop

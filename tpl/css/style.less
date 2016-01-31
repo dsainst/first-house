@@ -178,6 +178,7 @@ a {
      color: #eceff1;
       text-transform: uppercase;
       display: block;
+      font-weight: 500;
       margin: 20px 0;
     }
   }
@@ -248,7 +249,7 @@ a {
 }
 
 .btn-classic {
-  padding: 13px 30px;
+  padding: 12px 30px;
   background: #80cbc4;
   background: linear-gradient(to top, #3e9442 0%, #54a958 36%, #62b766 100%);
   color: #fff;
@@ -258,7 +259,7 @@ a {
   font-size: 18px;
   display: block;
   text-shadow: 1px 1px #333;
-  box-shadow: 0 3px 0 #27632a;
+  box-shadow: 0 5px 0 #27632a;
   position: relative;
   &:hover {
     background: linear-gradient(to bottom, #3e9442 0%, #54a958 36%, #62b766 100%);
@@ -267,7 +268,7 @@ a {
 }
 
 .btn-white {
-  padding: 13px 30px;
+  padding: 12px 30px;
   background: #fff;
   font-weight: bold;
   color: #449a48;
@@ -275,7 +276,7 @@ a {
   font-size: 18px;
   display: block;
   position: relative;
-  box-shadow: 0 3px 0 #bed1bf;
+  box-shadow: 0 5px 0 #bed1bf;
   &:hover {
     bottom: -2px;
     box-shadow: none;
@@ -289,15 +290,22 @@ a {
         font-size: 26px;
         font-family: Georgia-BoldItalic, sans-serif;
         outline: none;
+        line-height: 132px;
         padding: 0 20px;
         span {
           font-size: 40px;
           border: 1px solid #80cbc4;
           border-radius: 4px;
-          padding: 2px 15px;
-          line-height: 132px;
+          /* padding: 0; */
+          line-height: 52px;
           margin-right: 10px;
           text-align: center;
+          margin-top: 40px;
+          width: 51px;
+          display: block;
+          height: 51px;
+          float: left;
+          font-family: "Georgia Regular";
         }
       }
       &.ui-state-active {
@@ -455,11 +463,13 @@ a {
 
           p {
             font-size: 14px;
+            font-family:  "Roboto", sans-serif;
             &.title {
               font-size: 16px;
               text-transform: uppercase;
-              font-weight: bold;
+              font-weight: 600;
               margin-bottom: 5px;
+              font-family: "Myriad Pro", sans-serif;
             }
           }
         }
@@ -647,7 +657,7 @@ a {
     text-align: center;
     overflow: hidden;
     .sticker {
-      margin: 0px auto 20px;
+      margin: -6px auto 20px;
       font-size: 22px;
       color: #fff;
       background: #66bb6a;
@@ -834,8 +844,9 @@ a {
       }
       p {
         font-size: 20px;
+        font-weight: 500;
         text-transform: uppercase;
-        color: #26a69a;
+        color: #80cbc4;
         line-height: 1.5em;
       }
     }
@@ -850,7 +861,7 @@ a {
     margin: 30px 0 0;
     .green-center {
       font-size: 24px;
-      color: green;
+      color: #3c9240;
       text-decoration: underline;
       font-family: Georgia-BoldItalic, sans-serif;
       margin-bottom: 20px;
