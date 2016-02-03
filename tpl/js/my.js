@@ -119,6 +119,7 @@ $(window).scroll(function(){
     if(!noScrollAction){
         // Get container scroll position
         var fromTop = $(this).scrollTop()+topMenuHeight;
+        if (href=="#variant") fromTop=fromTop-40;
 
         console.log(topMenuHeight+' '+fromTop);
         if (fromTop>120) {
@@ -149,4 +150,7 @@ $(window).scroll(function(){
 $(document).ready(function() {
 
     call_modal(1);
+    var windowWidth = $(window).width();
+    if (windowWidth<=1040) $('.nomobile').hide();
+
 });

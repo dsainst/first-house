@@ -2,6 +2,30 @@ html * {
   max-height: 9999999px;
 }
 
+table {
+  border-collapse: collapse;
+  tr {
+    &:first-child {
+      td {
+        color: #fff;
+        text-align: center;
+        vertical-align: middle;
+        padding: 7px 15px;
+        border: 1px solid #35c4b0;
+        font-size: 16px;
+      }
+      background: #2fb19f;
+    }
+    td {
+      font-size: 14px;
+      color: #78909c;
+      vertical-align: middle;
+      padding: 7px 15px;
+      border: 1px solid #35c4b0;
+    }
+  }
+}
+
 input {
   border: 0;
   outline: none;
@@ -23,6 +47,7 @@ input {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 a {
@@ -66,10 +91,16 @@ a {
         &:after {
           content: '';
           border-bottom: 3px solid #80cbc4;
-          width: 100%;
-          height: 1px;
-          display: block;
         }
+      }
+    }
+    a {
+      &:after {
+        content: '';
+        border-bottom: 3px solid transparent;
+        width: 100%;
+        height: 1px;
+        display: block;
       }
     }
     &:first-child {
@@ -171,7 +202,7 @@ a {
       font-style: italic;
       color: #fff;
       line-height: 1.3em;
-      text-shadow: 1px 1px #333;
+      text-shadow: 1px 1px 3px #777;
     }
     span {
       font-size: 24px;
@@ -256,9 +287,9 @@ a {
   border: 0;
   outline: none;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 20px;
   display: block;
-  text-shadow: 1px 1px #333;
+  text-shadow: 1px 1px 3px #777;
   box-shadow: 0 5px 0 #27632a;
   position: relative;
   &:hover {
@@ -273,7 +304,7 @@ a {
   font-weight: bold;
   color: #449a48;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 20px;
   display: block;
   position: relative;
   box-shadow: 0 5px 0 #bed1bf;
@@ -427,6 +458,10 @@ a {
   }
 }
 
+.af-message-error {
+  display: none !important; 
+}
+
 .bkg-2 {
   background: url("../images/bg-3.jpg") no-repeat;
   height: 793px;
@@ -446,6 +481,7 @@ a {
         overflow: hidden;
         clear: both;
         margin-bottom: 30px;
+        display: table;
         .img-block {
           float: left;
           background: #ffffff;
@@ -457,15 +493,18 @@ a {
           line-height: 60px;
           text-align: center;
           margin-right: 15px;
-
+          display: table-cell;
         }
         .r-block {
-
+          display: table-cell;
+          vertical-align: top;
           p {
             font-size: 14px;
             font-family:  "Roboto", sans-serif;
+            color: #78909c;
             &.title {
-              font-size: 16px;
+              font-size: 17px;
+              color: #455a64;
               text-transform: uppercase;
               font-weight: 600;
               margin-bottom: 5px;
@@ -500,6 +539,7 @@ a {
       .form {
         width: 80%;
         margin: 0 auto;
+        padding-bottom: 5px;
       }
       .f-group {
         display: inline-block;
@@ -562,6 +602,12 @@ a {
     }
     .form-inline {
       margin: 20px 50px;
+      overflow: hidden;
+      p {
+        float: right;
+        height: 54px;
+        width: 280px;
+      }
       .f-group {
         display: inline-block;
         float: left;
@@ -591,7 +637,8 @@ a {
 
       }
       .btn-classic {
-        padding: 14px 65px;
+        padding: 14px 60px;
+        width: 100%;
         cursor: pointer;
       }
     }
@@ -886,6 +933,9 @@ a {
           max-width: 100%;
         }
       }
+      .desc {
+        line-height: 1.4em;
+      }
       .people {
         overflow: hidden;
         margin: 15px 0;
@@ -900,12 +950,13 @@ a {
           p {
             font-size: 14px;
             color: #455a64;
-            line-height: 1.4em;
+            line-height: 1.6em;
           }
           .title {
             font-size: 16px;
             text-transform: uppercase;
             color: #80cbc4;
+            font-weight: 500;
           }
         }
       }
@@ -1166,7 +1217,7 @@ footer {
   max-height: 500px;
 }
 
-.mylist {
+ul.mylist {
   li {
     &:before {
       content: "\f111";
@@ -1180,6 +1231,24 @@ footer {
       top: -2px;
       position: relative;
       margin-right: 10px;
+    }
+  }
+}
+
+ol.mylist {
+  counter-reset: point; /* задаем переменную для счетчика */
+
+  li {
+    padding-left: 15px;
+    position: relative;
+    &:before {
+      color: #80cbc4;
+      font-size: 14px;
+      content: counter(point)". ";
+      counter-increment: point 1;
+      position: absolute;
+      left: 0;
+      padding: 1px 0;
     }
   }
 }
