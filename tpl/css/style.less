@@ -293,8 +293,14 @@ a {
   box-shadow: 0 5px 0 #27632a;
   position: relative;
   &:hover {
-    background: linear-gradient(to bottom, #3e9442 0%, #54a958 36%, #62b766 100%);
-    box-shadow: none;
+    background: linear-gradient(to bottom, #76d87a 0%,  #50be56 100%);
+    color: #fff;
+    box-shadow: 0 5px 0 #549b58;
+  }
+  &:active, &:focus {
+    background: linear-gradient(to bottom, #549b58 0%,  #317635 100%);
+    color: #fff;
+    box-shadow: 0 5px 0 #08440C;
   }
 }
 
@@ -309,8 +315,14 @@ a {
   position: relative;
   box-shadow: 0 5px 0 #bed1bf;
   &:hover {
-    bottom: -2px;
-    box-shadow: none;
+    background: linear-gradient(to bottom, #76d87a 0%,  #50be56 100%);
+    color: #fff;
+    box-shadow: 0 5px 0 #549b58;
+  }
+  &:active, &:focus {
+    background: linear-gradient(to bottom, #549b58 0%,  #317635 100%);
+    color: #fff;
+    box-shadow: 0 5px 0 #08440C;
   }
 }
 
@@ -327,8 +339,7 @@ a {
           font-size: 40px;
           border: 1px solid #80cbc4;
           border-radius: 4px;
-          /* padding: 0; */
-          line-height: 52px;
+          line-height: 41px;
           margin-right: 10px;
           text-align: center;
           margin-top: 40px;
@@ -336,7 +347,7 @@ a {
           display: block;
           height: 51px;
           float: left;
-          font-family: "Georgia Regular";
+          font-family: "Georgia";
         }
       }
       &.ui-state-active {
@@ -455,6 +466,14 @@ a {
   padding: 30px 0;
   .title-block {
     margin-bottom: 20px;
+    .h2 {
+      color: #fff;
+      .line {
+        &:after {
+          border-bottom: 1px solid #80cbc4;
+        }
+      }
+    }
   }
 }
 
@@ -503,7 +522,7 @@ a {
             font-family:  "Roboto", sans-serif;
             color: #78909c;
             &.title {
-              font-size: 17px;
+              font-size: 18px;
               color: #455a64;
               text-transform: uppercase;
               font-weight: 600;
@@ -556,8 +575,10 @@ a {
           box-sizing: border-box;
           padding-left: 40px;
           border-radius: 10px;
-          font-size: 16px;
-          line-height: 1;
+          font-size: 17px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 300;
+          line-height: 1.7em;
           width: 100%;
           outline: none;
           border: 1px solid #fff;
@@ -582,9 +603,10 @@ a {
           box-sizing: border-box;
           padding: 10px 40px;
           border-radius: 10px;
-          font-size: 16px;
+          font-size: 17px;
           line-height: 1;
           font-family: "Roboto", sans-serif;
+          font-weight: 300;
           width: 100%;
           outline: none;
           border: 1px solid #fff;
@@ -606,7 +628,7 @@ a {
       p {
         float: right;
         height: 54px;
-        width: 280px;
+        width: 286px;
       }
       .f-group {
         display: inline-block;
@@ -620,9 +642,11 @@ a {
           box-sizing: border-box;
           padding-left: 40px;
           border-radius: 10px;
-          font-size: 16px;
-          line-height: 1;
+          font-size: 17px;
+          line-height: 1.7em;
           outline: none;
+          font-family: "Roboto", sans-serif;
+          font-weight: 300;
           border: 1px solid #fff;
           width: 237px;
           &.error {
@@ -637,7 +661,7 @@ a {
 
       }
       .btn-classic {
-        padding: 14px 60px;
+        padding: 12px 60px;
         width: 100%;
         cursor: pointer;
       }
@@ -934,7 +958,7 @@ a {
         }
       }
       .desc {
-        line-height: 1.4em;
+        line-height: 1.6em;
       }
       .people {
         overflow: hidden;
@@ -981,6 +1005,11 @@ a {
   .title-block {
     .h2 {
       color: #fff;
+      .line {
+        &:after {
+          border-bottom: 1px solid #80cbc4;
+        }
+      }
     }
   }
   .address {
@@ -995,6 +1024,37 @@ a {
     }
     .social {
       margin-top: 10px;
+      a {
+        overflow: hidden;
+        &.vk {
+          background: url(../images/vk.png) no-repeat;
+          display: inline-block;
+          width: 28px;
+          height: 26px;
+          &:hover {
+            background: url(../images/vk2.png) no-repeat;
+          }
+        }
+        &.fb {
+          background: url(../images/fb.png) no-repeat;
+          display: inline-block;
+          width: 28px;
+          height: 26px;
+          &:hover {
+            background: url(../images/fb2.png) no-repeat;
+          }
+        }
+        &.insta {
+          background: url(../images/insta.png) no-repeat;
+          display: inline-block;
+          width: 28px;
+          height: 26px;
+          &:hover {
+            background: url(../images/insta2.png) no-repeat;
+          }
+        }
+
+      }
     }
   }
 }

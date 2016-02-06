@@ -267,8 +267,15 @@ a {
   position: relative;
 }
 .btn-classic:hover {
-  background: linear-gradient(to bottom, #3e9442 0%, #54a958 36%, #62b766 100%);
-  box-shadow: none;
+  background: linear-gradient(to bottom, #76d87a 0%, #50be56 100%);
+  color: #fff;
+  box-shadow: 0 5px 0 #549b58;
+}
+.btn-classic:active,
+.btn-classic:focus {
+  background: linear-gradient(to bottom, #549b58 0%, #317635 100%);
+  color: #fff;
+  box-shadow: 0 5px 0 #08440C;
 }
 .btn-white {
   padding: 12px 30px;
@@ -282,8 +289,15 @@ a {
   box-shadow: 0 5px 0 #bed1bf;
 }
 .btn-white:hover {
-  bottom: -2px;
-  box-shadow: none;
+  background: linear-gradient(to bottom, #76d87a 0%, #50be56 100%);
+  color: #fff;
+  box-shadow: 0 5px 0 #549b58;
+}
+.btn-white:active,
+.btn-white:focus {
+  background: linear-gradient(to bottom, #549b58 0%, #317635 100%);
+  color: #fff;
+  box-shadow: 0 5px 0 #08440C;
 }
 #tabs .ui-tabs-nav li a {
   font-size: 26px;
@@ -296,8 +310,7 @@ a {
   font-size: 40px;
   border: 1px solid #80cbc4;
   border-radius: 4px;
-  /* padding: 0; */
-  line-height: 52px;
+  line-height: 41px;
   margin-right: 10px;
   text-align: center;
   margin-top: 40px;
@@ -305,7 +318,7 @@ a {
   display: block;
   height: 51px;
   float: left;
-  font-family: "Georgia Regular";
+  font-family: "Georgia";
 }
 #tabs .ui-tabs-nav li.ui-state-active a {
   background: #263238;
@@ -433,6 +446,12 @@ a {
 #preim .title-block {
   margin-bottom: 20px;
 }
+#preim .title-block .h2 {
+  color: #fff;
+}
+#preim .title-block .h2 .line:after {
+  border-bottom: 1px solid #80cbc4;
+}
 .af-message-error {
   display: none !important;
 }
@@ -481,7 +500,7 @@ a {
   color: #78909c;
 }
 .bkg-2 .half-right-block ul li .r-block p.title {
-  font-size: 17px;
+  font-size: 18px;
   color: #455a64;
   text-transform: uppercase;
   font-weight: 600;
@@ -529,8 +548,10 @@ a {
   box-sizing: border-box;
   padding-left: 40px;
   border-radius: 10px;
-  font-size: 16px;
-  line-height: 1;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.7em;
   width: 100%;
   outline: none;
   border: 1px solid #fff;
@@ -555,9 +576,10 @@ a {
   box-sizing: border-box;
   padding: 10px 40px;
   border-radius: 10px;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1;
   font-family: "Roboto", sans-serif;
+  font-weight: 300;
   width: 100%;
   outline: none;
   border: 1px solid #fff;
@@ -577,7 +599,7 @@ a {
 .form-block .form-inline p {
   float: right;
   height: 54px;
-  width: 280px;
+  width: 286px;
 }
 .form-block .form-inline .f-group {
   display: inline-block;
@@ -592,9 +614,11 @@ a {
   box-sizing: border-box;
   padding-left: 40px;
   border-radius: 10px;
-  font-size: 16px;
-  line-height: 1;
+  font-size: 17px;
+  line-height: 1.7em;
   outline: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   border: 1px solid #fff;
   width: 237px;
 }
@@ -607,7 +631,7 @@ a {
   left: 10px;
 }
 .form-block .form-inline .btn-classic {
-  padding: 14px 60px;
+  padding: 12px 60px;
   width: 100%;
   cursor: pointer;
 }
@@ -881,7 +905,7 @@ a {
   max-width: 100%;
 }
 #testimonials .slider-t li .desc {
-  line-height: 1.4em;
+  line-height: 1.6em;
 }
 #testimonials .slider-t li .people {
   overflow: hidden;
@@ -923,6 +947,9 @@ a {
 #contact .title-block .h2 {
   color: #fff;
 }
+#contact .title-block .h2 .line:after {
+  border-bottom: 1px solid #80cbc4;
+}
 #contact .address {
   text-align: center;
   line-height: 1.6em;
@@ -936,6 +963,36 @@ a {
 }
 #contact .address .social {
   margin-top: 10px;
+}
+#contact .address .social a {
+  overflow: hidden;
+}
+#contact .address .social a.vk {
+  background: url(../images/vk.png) no-repeat;
+  display: inline-block;
+  width: 28px;
+  height: 26px;
+}
+#contact .address .social a.vk:hover {
+  background: url(../images/vk2.png) no-repeat;
+}
+#contact .address .social a.fb {
+  background: url(../images/fb.png) no-repeat;
+  display: inline-block;
+  width: 28px;
+  height: 26px;
+}
+#contact .address .social a.fb:hover {
+  background: url(../images/fb2.png) no-repeat;
+}
+#contact .address .social a.insta {
+  background: url(../images/insta.png) no-repeat;
+  display: inline-block;
+  width: 28px;
+  height: 26px;
+}
+#contact .address .social a.insta:hover {
+  background: url(../images/insta2.png) no-repeat;
 }
 footer {
   padding: 10px 0;

@@ -68,8 +68,10 @@ menuItems.click(function(e){
     var correct = 0;
     if (topMenu.hasClass('menu-fix'))
         correct = 50;
-    var href = $(this).attr("href"),
-        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+correct+1;
+    var href = $(this).attr("href");
+    if (href=="#variant" && !topMenu.hasClass('menu-fix'))
+    correct = -20;
+    var offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+correct+1;
     noScrollAction = true;
     $('html, body').stop().animate({
         scrollTop: offsetTop
@@ -81,7 +83,7 @@ menuItems.click(function(e){
                 .end().filter("[href=" + href +"]").parent().addClass("active");
             setTimeout(function(){ noScrollAction = false; }, 10);
 console.log(offsetTop);
-            if (offsetTop>90) {
+            if (offsetTop>10) {
                 topMenu.css('position','fixed').addClass('menu-fix');
             } else {
                 topMenu.css('position','relative').removeClass('menu-fix');
@@ -93,7 +95,8 @@ console.log(offsetTop);
 
 $('.perehod').click(function(e){
     var href = $(this).attr("href"),
-        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-fixed+1;
+
     noScrollAction = true;
     $('html, body').stop().animate({
         scrollTop: offsetTop-80
@@ -119,10 +122,9 @@ $(window).scroll(function(){
     if(!noScrollAction){
         // Get container scroll position
         var fromTop = $(this).scrollTop()+topMenuHeight;
-        if (href=="#variant") fromTop=fromTop-40;
 
         console.log(topMenuHeight+' '+fromTop);
-        if (fromTop>120) {
+        if (fromTop>150) {
             topMenu.css('position','fixed').addClass('menu-fix');
         } else {
             topMenu.css('position','relative').removeClass('menu-fix');
